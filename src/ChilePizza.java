@@ -5,11 +5,11 @@ public class ChilePizza extends PizzaDecorator {
 
     @Override
     public String pizzaNames() {
-        return super.pizzaNames()+"with chile sauce";
+        return super.pizzaNames()+" with chile sauce";
     }
 
     @Override
     public double getPrice() {
-        return this.getPrice()+20.50;
+        return pizza.getPrice()+20;
     }
 }
