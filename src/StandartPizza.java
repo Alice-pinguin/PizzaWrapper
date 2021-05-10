@@ -1,18 +1,23 @@
 public  class StandartPizza implements Pizza {
-    private double price;
-    private String pizzaNames;
 
-    public StandartPizza(double price, String pizzaNames) {
+    private final long price;
+    private final String name;
+    public StandartPizza(long price, String name) {
         this.price = price;
-        this.pizzaNames = pizzaNames;
+        this.name = name;
+    }
+    @Override
+    public long getPrice() {
+        return price;
+    }
+    @Override
+    public String getName() {
+        return name;
     }
 
     @Override
-    public double getPrice() {
-        return this.price;
+    public String toString() {
+        return "Total price order is: " + getPrice() + ", pizza is -  " + getName() + ".";
     }
-    @Override
-    public String pizzaNames() {
-        return this.pizzaNames;
-    }
+    
 }
